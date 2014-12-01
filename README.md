@@ -20,12 +20,12 @@ Mobile sensor related resarch by HTML5
 
 * [Android (TBD) ][1]
 
-1. Motion sensors
-	These sensors measure acceleration forces and rotational forces along three axes. This category includes accelerometers, gravity sensors, gyroscopes, and rotational vector sensors.
-2. Environmental sensors
-	These sensors measure various environmental parameters, such as ambient air temperature and pressure, illumination, and humidity. This category includes barometers, photometers, and thermometers.
-3. Position sensors
-	These sensors measure the physical position of a device. This category includes orientation sensors and magnetometers.
+	1. Motion sensors
+		These sensors measure acceleration forces and rotational forces along three axes. This category includes accelerometers, gravity sensors, gyroscopes, and rotational vector sensors.
+	2. Environmental sensors
+		These sensors measure various environmental parameters, such as ambient air temperature and pressure, illumination, and humidity. This category includes barometers, photometers, and thermometers.
+	3. Position sensors
+		These sensors measure the physical position of a device. This category includes orientation sensors and magnetometers.
 
 
 * Articles
