@@ -3,6 +3,25 @@ mobile-sensor
 
 Mobile sensor related resarch by HTML5
 
+### [W3C Sensor API][2]
+<table class="simple">
+	<thead>
+		<tr>
+		<th>DOM Sensor Event</th>
+		<th>Sensor Type</th>
+		<th>Data Type</th>
+		<th>Units</th></tr>
+	</thead>
+	<tbody>
+		<tr><td>devicetemperature</td><td>A ambient temperature sensor</td><td>double</td><td>degree Celsius (ºC)</td></tr>
+		<tr><td>devicepressure</td><td>A pressure sensor</td><td>double</td><td>kiloPascal (kP)</td></tr>
+		<tr><td>devicehumidity</td><td>A releative humidity sensor</td><td>double</td><td>percentage</td></tr>
+		<tr><td>devicelight</td><td>A light sensor</td><td>double</td><td>Lux</td></tr>
+		<tr><td>devicenoise</td><td>A ambient noise sensor</td><td>double</td><td>dbA</td></tr>
+		<tr><td>deviceproximity</td><td>A proximity sensor</td><td>double</td><td>centimetres (cm)</td></tr>
+	</tbody>
+</table>
+
 ### Platform
 
 * IOS
@@ -27,12 +46,20 @@ Mobile sensor related resarch by HTML5
 	3. Position sensors
 		These sensors measure the physical position of a device. This category includes orientation sensors and magnetometers.
 
-
 * Articles
-	-  http://www.computerworld.com/article/2476591/healthcare-it/latest-ios-8-beta-shows-apple-s-sensor-sensibility.html
+	- [HTML5 Device API Related ISSUE][4]
+	- [IOS Sensor Review][5]
+	- [The HTML5 Speech Recogntion API][6]
 
 * Library
 	- https://github.com/ehzhang/sense-js
 
+* Others
+	- [JAVASCRIPT APIS CURRENT STATUS][3]
 
 [1]: http://developer.android.com/guide/topics/sensors/sensors_overview.html
+[2]: https://dvcs.w3.org/hg/dap/raw-file/tip/sensor-api/Overview.html
+[3]: http://www.w3.org/standards/techs/js#w3c_all
+[4]: http://blog.csdn.net/hfahe/article/details/7338032
+[5]: http://www.computerworld.com/article/2476591/healthcare-it/latest-ios-8-beta-shows-apple-s-sensor-sensibility.html
+[6]: http://shapeshed.com/html5-speech-recognition-api/

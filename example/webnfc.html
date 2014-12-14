@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>Web NFC</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// http://www.w3.org/TR/nfc/
+		var hello = new NDEFRecordText("hello world", "en-US", "UTF-8");
+
+		navigator.nfc.ontagfound = function(e) {
+		    window.console.log('NFC Tag found!');
+		    var tag = e.tag;
+		    tag.writeNDEF(new NDEFMessage([hello]));
+		}
+
+		navigator.nfc.startPoll().catch(
+		  function(e) {
+		    window.console.error(e);
+		  });
+	</script>
+</body>
+</html>

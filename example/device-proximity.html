@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2>This Demo only works in firefox.</h2>
+	<p>
+		The device proximity sensor range is :
+		<span class="min"></span> - <span class="max"></span><br>
+
+		Current deviceproximity is: <span class="curr"></span><br>
+
+		User Action: <span class="user-action"></span>
+	</p>
+	<script type="text/javascript">
+		var $ = function(sel) { 
+			return document.querySelector(sel);
+		}
+
+		// An event listener for a DeviceProximityEvent.
+		window.addEventListener('deviceproximity', function(event) {
+		    // The maximum distance the sensor covers (in cm).
+		    var max = event.max;
+
+		    // The minimum distance the sensor covers (in cm).
+		    var min = event.min;
+
+		    // The device proximity (in cm).
+		    var proximity = event.value;
+
+		    $('.min').innerText = min;
+		    $('.max').innerText = max;
+		    $('.curr').innerText = proximity;
+		});
+
+		// An event listener for a UserProximityEvent.
+		window.addEventListener('userproximity', function(event) {
+		    if (event.near) {
+		        // Do something.
+		        $('.user-action').innerText = "closing to";
+		    } else {
+		        // Do something else.
+		        $('.user-action').innerText = "far away";
+		    }
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>Battery Status</title>
+</head>
+<body>
+	<p>
+		bettery level: <span class="level"></span>
+	</p>
+	<p>
+		Charging Status: <span class="charge-status"></span><br>
+		Charging Time:<span class="charge-time"></span>
+	</p>
+	<p>
+		Discharging Time: <span class="discharge-time"></span>
+	</p>
+	<script type="text/javascript">
+		var $ = function(sel) {
+			return document.querySelector(sel);
+		}
+
+		var text = function(sel, text) {
+			$(sel).innerText = text;
+		}
+		navigator.getBattery().then(function(battery) {
+			// Get the current power level.
+			text('.level',battery.level);
+
+			// Get the charging status (boolean).
+			text('.charge-status',battery.charging);
+
+			// Find out how long until the battery is charged.
+			text('.charge-time',battery.chargingTime);
+
+			// Find out how long until the battery is empty.
+			text('.discharge-time',battery.dischargingTime);
+		});
+
+	</script>
+</body>
+</html>

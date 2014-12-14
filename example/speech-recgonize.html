@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>Speech Recgoniztion</title>
+</head>
+<body>
+	<p>
+		API: 
+		<span class="result"></span>
+	</p>
+	<p>
+		x-webkit-speech: 
+		<input type="text" x-webkit-speech />
+	</p>
+	<script type="text/javascript">
+		var recognition = new webkitSpeechRecognition();
+
+			recognition.continuous = true;
+			recognition.interimResults = true;
+			recognition.lang = "en-GB";
+
+			recognition.onresult = function(event) { 
+			  console.log(event);
+
+			  document.querySelector('.result').innerText = JSON.stringify(event.results);
+			}
+			recognition.start();
+	</script>
+</body>
+</html>

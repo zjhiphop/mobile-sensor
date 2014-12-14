@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>Ambient Light</title>
+</head>
+<body>
+	<h2>This Demo only works in firefox.</h2>
+
+	<p>
+		Your light level is: <span class="light-level"></span>
+	</p>
+	<script type="text/javascript">
+		window.addEventListener('devicelight', function(event) {
+		    // Get the ambient light level in lux.
+		    var lightLevel = event.value;
+		    document.querySelector('.light-level').innerText = lightLevel;
+		});
+	</script>
+</body>
+</html>

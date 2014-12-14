@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>Web RTC</title>
+</head>
+<body>
+	<video autoplay width="100%" height="500px"></video>
+	<script type="text/javascript">
+	'use strict';
+	/*
+	Web RTC Resource: 
+		https://docs.google.com/document/d/1idl_NYQhllFEFqkGQOLv8KBK8M3EVzyvxnKkHl4SuM8/edit
+	*/
+
+	// variables in global scope so available to console
+	var video = document.querySelector('video');
+	var constraints = {
+	  audio: false,
+	  video: true
+	};
+
+	navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia ||
+	  navigator.mozGetUserMedia;
+
+	function successCallback(stream) {
+	  window.stream = stream; // stream available to console
+	  if (window.URL) {
+	    video.src = window.URL.createObjectURL(stream);
+	  } else {
+	    video.src = stream;
+	  }
+	}
+
+	function errorCallback(error) {
+	  console.log('navigator.getUserMedia error: ', error);
+	}
+
+	navigator.getUserMedia(constraints, successCallback, errorCallback);
+	</script>
+
+	<!-- <iframe src="http://googlechrome.github.io/webrtc/" width="100%" height="1000px"></iframe> -->
+</body>
+</html>

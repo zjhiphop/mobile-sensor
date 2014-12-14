@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>Geo Location</title>
+</head>
+<body>
+	<section>
+		Your current location is:<br>
+		latitude: <span class="latitude"></span><br>
+		longitude: <span class="longitude"></span>
+	</section>
+	<script type="text/javascript">
+		// Get the location.
+		navigator.geolocation.getCurrentPosition(function(position) {
+		    // Get the positioning coordinates.
+		    var lat = position.coords.latitude;
+		    var lon = position.coords.longitude;
+
+		    // Do something interesting...
+		   	document.querySelector('.latitude').innerText = lon;
+		   	document.querySelector('.longitude').innerText = lat;
+		});
+	</script>
+</body>
+</html>
