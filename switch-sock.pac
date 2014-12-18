@@ -2,7 +2,7 @@ function regExpMatch(url, pattern) {
 	try { return new RegExp(pattern).test(url); } catch(ex) { return false; }    }
 
 	// execute replace by regex: 'PROXY (\d|\.|:)+' -> PROXY
-    var PROXY = 'PROXY 127.0.0.1:9999';
+    var PROXY = 'PROXY 121.41.41.41:9999';
 
     function FindProxyForURL(url, host) {
 	if (regExpMatch(url, "facebook\\.[com|net]|googleusercontent|maem\\.umr|amlong\\.info|s3\\.feedly|maniacdev|polymer|gonacl")) return 'SOCKS5 127.0.0.1:7002';
