@@ -1,4 +1,4 @@
 function FindProxyForURL(url, host)
 {
-    return "SOCKS 127.0.0.1:9999";
+    return "SOCKS 192.168.2.113:7002";
 }
