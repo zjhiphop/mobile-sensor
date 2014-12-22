@@ -3,20 +3,31 @@
 	<title>Web NFC</title>
 </head>
 <body>
+	<p id="content"></p>
 	<script type="text/javascript">
+		if(!window.NDEFRecordText) {
+			document.querySelector("#content").innerText = 'Sorry, your browser is not support web-nfc!';
+		}
+
 		// http://www.w3.org/TR/nfc/
 		var hello = new NDEFRecordText("hello world", "en-US", "UTF-8");
 
 		navigator.nfc.ontagfound = function(e) {
 		    window.console.log('NFC Tag found!');
+
 		    var tag = e.tag;
 		    tag.writeNDEF(new NDEFMessage([hello]));
+
+		    document.querySelector("#content").innerText = 'NFC Tag found!';
 		}
 
 		navigator.nfc.startPoll().catch(
 		  function(e) {
 		    window.console.error(e);
+
+		    document.querySelector("#content").innerText = 'Poll NFC failed!';
 		  });
+
 	</script>
 </body>
 </html>

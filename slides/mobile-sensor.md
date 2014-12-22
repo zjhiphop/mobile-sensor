@@ -2,7 +2,7 @@ title: HTML5 传感器
 speaker: zjhiphop
 url: https://github.com/zjhiphop/mobile-sensor
 transition: cards
-files: /js/demo.js,/css/demo.css
+files: /js/demo.js,/css/demo.css,/css/slide.css
 
 [slide]
 
@@ -60,6 +60,11 @@ files: /js/demo.js,/css/demo.css
 ```
 
 [slide]
+Show Case
+
+<iframe data-src="/example/device-orientation.html" src="about:blank;"></iframe>
+
+[slide]
 ## W3C API
 
 <img src="/img/a-rotation.png" width="40%">
@@ -93,6 +98,11 @@ if(window.ondevicemotion) {
 	    lastY = y;  
 }, false);  
 ```
+
+[slide]
+Show Case
+
+<iframe data-src="/example/device-motion.html" src="about:blank;"></iframe>
 
 [slide]
 网球游戏  
@@ -141,6 +151,11 @@ if(window.ondevicemotion) {
 ```
 
 [slide]
+Show Case: proximity
+
+<iframe data-src="/example/device-proximity.html" src="about:blank;"></iframe>
+
+[slide]
 # 环境
 * GPS
 * 磁力计
@@ -177,6 +192,11 @@ if(window.ondevicemotion) {
 ```
 
 [slide]
+Show Case: geolocation
+
+<iframe data-src="/example/geolocation.html" src="about:blank;"></iframe>
+
+[slide]
 案例：导航  
 传感器组合： GPS ＋ 磁力计  
 
@@ -190,6 +210,11 @@ window.addEventListener('devicelight', function(event) {
 		    document.querySelector('.light-level').innerText = lightLevel;
 		});
 ```
+
+[slide]
+Show Case: devicelight
+
+<iframe data-src="/example/device-light.html" src="about:blank;"></iframe>
 
 [slide] 
 CSS light-level  
@@ -217,10 +242,32 @@ CSS light-level
 ```
 
 [slide]
+Show Case: CSS light-level 
+
+<iframe data-src="/example/css-light-level.html" src="about:blank;"></iframe>
+
+[slide]
 ## 其他
 * 气压传感器 - 海拔 (devicepressure)
 * 温度 (devicetemperature)
 * 湿度 (devicehumidity)
+
+[slide]
+Show Case: 气压传感器 
+
+<iframe data-src="/example/device-pressure.html" src="about:blank;"></iframe>
+
+
+[slide]
+Show Case: 温度 
+
+<iframe data-src="/example/device-templature.html" src="about:blank;"></iframe>
+
+
+[slide]
+Show Case: 湿度 
+
+<iframe data-src="/example/device-humidity.html" src="about:blank;"></iframe>
 
 [slide]
 # 音频
@@ -245,6 +292,12 @@ CSS light-level
 		});
 	</script>
 ```
+
+[slide]
+Show Case: Device Noise 
+
+<iframe data-src="/example/device-noise.html" src="about:blank;"></iframe>
+
 [slide]
 案例： siri  
 ![siri](/img/siri.png "siri")
@@ -277,6 +330,11 @@ CSS light-level
 ```
 
 [slide]
+Show Case: 语音识别
+
+<iframe data-src="/example/speech-recognize.html" src="about:blank;"></iframe>
+
+[slide]
 # 视频
 * 摄像头
 * 显示器
@@ -289,9 +347,6 @@ CSS light-level
 试衣间  
 <img src="/img/try-ware.png">
 <img src="/img/try-ware-online.png">
-
-[slide]
-案例： [肤色识别][http://caowenhao.sinaapp.com/]
 
 [slide]
 案例： 虚拟现实(VR)  
@@ -339,9 +394,21 @@ navigator.getUserMedia(constraints, successCallback, errorCallback);
 </script>
 ```
 
+
 [slide]
-案例：webrtc chat (web socket + video)
-http://localhost:3002/test
+Show Case: media capture
+
+<iframe data-src="/example/media-capture.html" src="about:blank;" style="height:500px;" height="500px"></iframe>
+
+[slide]
+show case: 肤色识别  
+
+<iframe data-src="http://caowenhao.sinaapp.com/" src="about:blank"  style="height:800px;"  height="500px"></iframe>
+
+[slide]
+how case: webrtc chat (web socket + video)
+
+<iframe data-src="http://localhost:3002/test" src="about:blank"  style="height:500px;"  height="500px"></iframe>
 
 [slide]
 # 其它
@@ -378,6 +445,11 @@ http://localhost:3002/test
 ```
 
 [slide]
+how case: 电池电量
+
+<iframe data-src="/example/bettery.html" src="about:blank"></iframe>
+
+[slide]
 案例：振动提醒
 
 ```
@@ -389,6 +461,11 @@ http://localhost:3002/test
 		navigator.vibrate([500, 250, 500]);
 	</script>
 ```
+
+[slide]
+show case: 振动提醒
+
+<iframe data-src="/example/vibaration.html" src="about:blank"></iframe>
 
 [slide]
 案例：web nfc通信
@@ -411,10 +488,16 @@ http://localhost:3002/test
 ```
 
 [slide]
+show case: webnfc
+
+<iframe data-src="/example/webnfc.html" src="about:blank" height="500px"></iframe>
+
+[slide]
 iOS 兼容性  
 ![iOS 兼容性](/img/ios-compatible-table.jpeg "iOS 兼容性")
 
 [slide]
 [W3C Device API][http://www.w3.org/2009/dap/]
-![W3C Device API](/img/w3c-device-api.png "W3C Device API")
+
+<iframe data-src="http://www.w3.org/2009/dap/#roadmap" src="about:blank" style="height: 800px;"></iframe>
 

@@ -1,0 +1,49 @@
+<html>
+<head>
+	<title>Geo Location</title>
+	<style type="text/css">
+		.hide {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<p id="status">Checking...</p>
+	<section id="content" class="hide">
+		Your current location is:<br>
+		latitude: <span class="latitude"></span><br>
+		longitude: <span class="longitude"></span>
+	</section>
+	<script type="text/javascript">
+		function showGeo(lat, lot) {
+			document.querySelector('#content').classList.remove('hide');
+			
+			 // Do something interesting...
+		   	document.querySelector('.latitude').innerText = lon;
+		   	document.querySelector('.longitude').innerText = lat;
+		}
+
+		// Get the location.
+		navigator.geolocation.getCurrentPosition(function(position) {
+		    // Get the positioning coordinates.
+		    showGeo(position.coords.latitude, position.coords.longitude);
+		});
+
+		function geo_success(position) {
+		  showGeo(position.coords.latitude, position.coords.longitude);
+		}
+
+		function geo_error() {
+		  document.querySelector('#status').innerText = "Sorry, no position available.";
+		}
+
+		var geo_options = {
+		  enableHighAccuracy: true, 
+		  maximumAge        : 30000, 
+		  timeout           : 27000
+		};
+
+		var wpid = navigator.geolocation.watchPosition(geo_success, geo_error, geo_options);
+	</script>
+</body>
+</html>

@@ -3,10 +3,14 @@
 	<title>Pressure</title>
 </head>
 <body>
+	Your current pressure is:
+	<p id="content"></p>
 	<script type="text/javascript">
 		// An event listener for a DeviceProximityEvent.
 		window.addEventListener('devicepressure', function(event) {
 			console.log('devicepressure changed: ', event);
+
+			document.querySelector('#content').innerText = "Your devicepressure info: " +  event.value;
 		});
 	</script>
 </body>

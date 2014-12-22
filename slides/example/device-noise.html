@@ -3,10 +3,13 @@
 	<title>devicenoise</title>
 </head>
 <body>
+	your device noise is: 
+	<p id="content"></p>
 	<script type="text/javascript">
 		// An event listener for a DeviceProximityEvent.
 		window.addEventListener('devicenoise', function(event) {
-			console.log('devicenoise changed: ', event);
+
+			document.querySelector('#content').innerText = 'devicenoise changed: ' +  event.value;
 		});
 	</script>
 </body>

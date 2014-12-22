@@ -3,10 +3,15 @@
 	<title>Templature</title>
 </head>
 <body>
+	Your current templature is:
+	<p id="content"></p>
+
 	<script type="text/javascript">
 		// An event listener for a DeviceProximityEvent.
 		window.addEventListener('devicetemperature', function(event) {
 			console.log('Templature changed: ', event);
+
+			document.querySelector('#content').innerText = "Your bettery info: " +  event.value;
 		});
 	</script>
 </body>

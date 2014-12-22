@@ -3,10 +3,15 @@
 	<title>devicehumidity</title>
 </head>
 <body>
+	Your current humidity is:
+	
+	<p id="content"></p>
 	<script type="text/javascript">
 		// An event listener for a DeviceProximityEvent.
 		window.addEventListener('devicehumidity', function(event) {
 			console.log('devicehumidity changed: ', event);
+
+			document.querySelector('#content').innerText = "Your devicehumidity info: " +  event.value;
 		});
 	</script>
 </body>
