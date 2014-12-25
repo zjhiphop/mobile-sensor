@@ -1,11 +1,10 @@
 
 all: copy push clean
 
-copy: build 
-	cp -r output/ ./; 
+copy: build
+	git checkout gh-pages; cp -r output/ ./; 
 
 push: 
-	git checkout gh-pages; 
 	git add -A; 
 	git commit -m "[`date`] Generate new HTML"; 
 	git push origin;
