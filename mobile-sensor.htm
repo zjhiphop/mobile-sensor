@@ -1,6 +1,6 @@
 <!--
-    Powered By nodePPT
-    version: 0.9.2
+    Powered By nodePPT - This is probably the best web presentation tool so far!
+    version: 0.9.8-3
     site: https://github.com/ksky521/nodePPT
 -->
 <!doctype html>
@@ -510,7 +510,7 @@ navigator.getUserMedia(constraints, successCallback, errorCallback);
         </slide>
         <slide class="slide logoslide dark nobackground">
             <article class="flexbox vcenter">
-              <h2 style="color: white;">Powered By nodePPT v0.9.2</h2>
+              <h2 style="color: white;">Powered By nodePPT v0.9.8-3</h2>
             </article>
           </slide>
         <div class="slideTip" id="tip"></div>
@@ -540,34 +540,34 @@ MixJS.config({
     baseURL: [ base, path, 'js'].join('/')+'/'
 });
 
-
-MixJS.use('event/broadcast', function($){
-    $.loadJS('nodeppt.js',function(){
-        Slide.init({
-            containerID: 'container',
-            drawBoardID: 'drawBoard',
-            slideClass: '.slide',
-            buildClass: '.build',
-            progressID: 'progress',
-            transition: 'cards',
-            width: 1100,
-            dir: './',
-            
-            //打开下面的注释就开启postMessage方式
-            //访问网址127.0.0.1:8080/ppt/demo#client
-            control:{
-                type: 'postMessage',
-                args:{
-                    isControl:  false
-                }
-            },
-            
-            tipID: 'tip'
-        });
-    }).loadJS('highlight/hljs-0.8.js',function(){
-        hljs.tabReplace = '  ';
-        hljs.initHighlightingOnLoad();
-    });
+</script>
+<script src="./js/mixjs/lib/event/broadcast.js"></script>
+<script src="./js/nodeppt.js"></script>
+<script>
+Slide.init({
+    containerID: 'container',
+    drawBoardID: 'drawBoard',
+    slideClass: '.slide',
+    buildClass: '.build',
+    progressID: 'progress',
+    transition: 'cards',
+    width: 1100,
+    dir: './',
+    
+    //打开下面的注释就开启postMessage方式
+    //访问网址127.0.0.1:8080/ppt/demo#client
+    control:{
+        type: 'postMessage',
+        args:{
+            isControl:  false
+        }
+    },
+    
+    tipID: 'tip'
+});
+MixJS.loadJS('highlight/hljs-0.8.js',function(){
+    hljs.tabReplace = '  ';
+    hljs.initHighlightingOnLoad();
 });
 </script>
 <script src="./js/demo.js"></script>
