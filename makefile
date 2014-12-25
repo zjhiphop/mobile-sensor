@@ -12,8 +12,7 @@ push:
 	git checkout master;
 
 build:
-	cd slides; 
-	nodeppt generate mobile-sensor.md -a -o ../output
+	nodeppt generate slides/mobile-sensor.md -a -o ../output
 
 clean:
 	rm -rf output/ css/ fonts/ img/ js/
