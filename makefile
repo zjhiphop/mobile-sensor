@@ -1,17 +1,19 @@
 
-all: deploy cmmmit clean
+all: copy push clean
 
-deploy: build 
-	git checkout gh-pages; cp -r output/ ./;
+copy: build 
+	cp -r output/ ./; 
 
-commit: 
+push: 
+	git checkout gh-pages; 
 	git add -A; 
 	git commit -m "[`date`] Generate new HTML"; 
 	git push origin;
 	git checkout master;
 
 build:
-	cd slides; nodeppt generate mobile-sensor.md -a -o ../output
+	cd slides; 
+	nodeppt generate mobile-sensor.md -a -o ../output
 
 clean:
 	rm -rf output/ css/ fonts/ img/ js/
