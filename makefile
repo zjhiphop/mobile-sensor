@@ -1,10 +1,10 @@
 
-all: deploy
+all: push
 
-deploy: build 
-	cd ..; git checkout gh-pages; cp -r output/ .;
+copy: build 
+	git checkout gh-pages; cp -r output/ ./;
 
-commit: 
+push: copy
 	git add -A; git commit -m "[`date`] Generate new HTML"; git push origin
 
 build:
