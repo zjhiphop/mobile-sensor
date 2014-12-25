@@ -15,5 +15,5 @@ build:
 	nodeppt generate slides/mobile-sensor.md -a -o ../output
 
 clean:
-	rm -rf output/ css/ fonts/ img/ js/
+	rm -rf output/ css/ fonts/ img/ js/ mobile-sensor.htm
 
