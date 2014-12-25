@@ -1,0 +1,3 @@
+.slides>slide .slide-wrapper>article:only-child>iframe {
+	min-height: 500px;
+}
