@@ -1,5 +1,5 @@
 
-all: deploy
+all: deploy clean
 
 deploy: build 
 	git checkout gh-pages; cp -r output/ ./;
@@ -14,4 +14,5 @@ build:
 	cd slides; nodeppt generate mobile-sensor.md -a -o ../output
 
 clean:
-	rm -rf output/
+	rm -rf output/ css/ fonts/ img/ js/
+
