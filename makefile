@@ -1,7 +1,7 @@
 
-all: deploy clean
+all: deploy cmmmit clean
 
-deploy: build commit
+deploy: build 
 	git checkout gh-pages; cp -r output/ ./;
 
 commit: 
