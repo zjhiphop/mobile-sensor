@@ -3,17 +3,21 @@
 	<title>Device Motion</title>
 </head>
 <body>
+	<p>Please shake your device and see the background.</p>
 	<script type="text/javascript">  
-	var color = new Array('#fff', '#ff0', '#f00', '#000', '#00f', '#0ff');  
-	if(window.ondevicemotion) {  
+	var prefix = '../img/'
+	var img = new Array('jade.jpeg', 'fanglei.jpeg', 'ika.jpeg', 'cj.png', 'lc.png', 'hyr.png', 'wp.png');      
+
+	if('ondevicemotion' in window) {  
 	    var speed = 25;  
 	    var x = y = z = lastX = lastY = lastZ = 0;  
 	    window.addEventListener('devicemotion', function(){  
 	        var acceleration =event.accelerationIncludingGravity;  
 	        x = acceleration.x;  
 	        y = acceleration.y;  
+
 	        if(Math.abs(x-lastX) > speed || Math.abs(y-lastY) > speed) {  
-	            document.body.style.backgroundColor = color[Math.round(Math.random()*10)%6];  
+	            document.body.style.backgroundImage = 'url("' + prefix + img[Math.round(Math.random()*10)%7] + '")';
 	        }  
 	        lastX = x;  
 	        lastY = y;  
